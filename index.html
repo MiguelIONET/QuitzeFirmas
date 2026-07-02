@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administrador de Firmas Quitze</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="signature-config.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">Quitze Soluciones</p>
+      <h1>Administrador de Firmas</h1>
+    </div>
+    <div class="header-actions">
+      <button class="icon-button" id="refreshData" type="button" title="Actualizar datos">
+        <span aria-hidden="true">↻</span>
+        <span>Actualizar</span>
+      </button>
+      <button class="icon-button primary" id="copyHtml" type="button" title="Copiar firma">
+        <span aria-hidden="true">⧉</span>
+        <span>Copiar</span>
+      </button>
+      <button class="icon-button" id="downloadHtml" type="button" title="Descargar firma">
+        <span aria-hidden="true">↓</span>
+        <span>Descargar</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <section class="panel controls-panel" aria-label="Datos de firma">
+      <div class="panel-heading">
+        <h2>Datos</h2>
+        <span class="status-pill" id="dataStatus">Buscando datos...</span>
+      </div>
+
+      <label class="field">
+        <span>Empleado</span>
+        <select id="employeeSelect"></select>
+      </label>
+
+      <div class="form-grid">
+        <label class="field">
+          <span>Nombre</span>
+          <input id="nameInput" data-field="name" type="text" autocomplete="name">
+        </label>
+        <label class="field">
+          <span>Puesto</span>
+          <input id="titleInput" data-field="title" type="text" autocomplete="organization-title">
+        </label>
+        <label class="field">
+          <span>Teléfono</span>
+          <input id="phoneInput" data-field="phone" type="tel" autocomplete="tel">
+        </label>
+        <label class="field">
+          <span>Correo</span>
+          <input id="emailInput" data-field="email" type="email" autocomplete="email">
+        </label>
+        <label class="field full">
+          <span>Foto del empleado</span>
+          <input id="photoInput" data-field="photo" type="url" placeholder="https://...">
+        </label>
+        <label class="field">
+          <span>Página web</span>
+          <input id="websiteInput" data-field="website" type="url">
+        </label>
+        <label class="field">
+          <span>Texto de página</span>
+          <input id="websiteLabelInput" data-field="websiteLabel" type="text">
+        </label>
+      </div>
+
+      <div class="section-line"></div>
+
+      <div class="panel-heading compact">
+        <h2>Redes</h2>
+      </div>
+      <div class="form-grid">
+        <label class="field">
+          <span>Facebook</span>
+          <input id="facebookInput" data-field="facebook" type="url" placeholder="https://...">
+        </label>
+        <label class="field">
+          <span>Instagram</span>
+          <input id="instagramInput" data-field="instagram" type="url" placeholder="https://...">
+        </label>
+        <label class="field">
+          <span>LinkedIn</span>
+          <input id="linkedinInput" data-field="linkedin" type="url" placeholder="https://...">
+        </label>
+        <label class="field">
+          <span>YouTube</span>
+          <input id="youtubeInput" data-field="youtube" type="url" placeholder="https://...">
+        </label>
+      </div>
+
+      <div class="section-line"></div>
+
+      <div class="panel-heading compact">
+        <h2>Badges</h2>
+        <div class="segmented" id="badgeCountGroup" aria-label="Cantidad de badges">
+          <button type="button" data-count="3">3</button>
+          <button type="button" data-count="4">4</button>
+          <button type="button" data-count="5">5</button>
+          <button type="button" data-count="6">6</button>
+        </div>
+      </div>
+      <div class="badge-editor" id="badgeEditor"></div>
+    </section>
+
+    <section class="preview-panel" aria-label="Vista previa">
+      <div class="preview-toolbar">
+        <div>
+          <h2>Vista previa</h2>
+          <p id="templateStatus">Cargando plantilla...</p>
+        </div>
+        <button class="icon-button quiet" id="toggleCode" type="button" title="Ver HTML">
+          <span aria-hidden="true">&lt;/&gt;</span>
+          <span>HTML</span>
+        </button>
+      </div>
+      <div class="preview-frame-wrap">
+        <iframe id="signaturePreview" title="Vista previa de la firma"></iframe>
+      </div>
+      <textarea id="htmlOutput" class="html-output" readonly spellcheck="false"></textarea>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

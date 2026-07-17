@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="340" viewBox="0 0 640 340" role="img" aria-label="Mapamundi dibujado con puntos">
+  <defs>
+    <pattern id="dots" width="11" height="11" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.15" fill="#d8d8d8"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="340" rx="18" fill="#101010"/>
+  <g fill="url(#dots)">
+    <path d="M45 79 79 51 129 35 177 42 205 60 230 82 217 105 190 113 174 135 154 157 132 149 119 130 91 126 75 111 52 105 36 91Z"/>
+    <path d="M132 150 157 155 178 174 170 190 151 184 139 172 124 168Z"/>
+    <path d="M150 178 181 174 205 192 211 218 198 250 181 280 164 311 151 284 142 251 144 223 131 196Z"/>
+    <path d="M151 26 184 20 207 34 194 54 162 59 137 44Z"/>
+    <path d="M281 87 302 74 329 78 344 91 329 104 303 105 285 98Z"/>
+    <path d="M303 117 337 111 363 131 368 164 351 202 334 236 313 224 299 196 285 164 290 135Z"/>
+    <path d="M332 75 372 56 422 48 471 57 510 68 555 70 605 91 596 113 565 124 529 119 504 139 472 146 446 128 420 122 394 112 365 116 347 101Z"/>
+    <path d="M390 119 413 127 426 151 409 161 390 144Z"/>
+    <path d="M476 142 500 144 516 165 503 183 484 173 469 158Z"/>
+    <path d="M502 228 536 216 574 224 596 247 582 271 548 280 516 268 491 246Z"/>
+    <path d="M591 277 607 281 615 294 603 305 587 296Z"/>
+    <circle cx="570" cy="174" r="9"/>
+    <circle cx="591" cy="190" r="6"/>
+  </g>
+  <g fill="none" stroke="#d71920" stroke-width="2" opacity=".52">
+    <path d="M111 101 Q260 24 323 97"/>
+    <path d="M184 206 Q289 83 395 102"/>
+    <path d="M325 145 Q434 60 529 101"/>
+    <path d="M337 174 Q437 214 544 246"/>
+  </g>
+  <g fill="#ef242b" filter="url(#glow)">
+    <circle cx="111" cy="101" r="4"/>
+    <circle cx="184" cy="206" r="4"/>
+    <circle cx="323" cy="97" r="4"/>
+    <circle cx="325" cy="145" r="4"/>
+    <circle cx="395" cy="102" r="4"/>
+    <circle cx="529" cy="101" r="4"/>
+    <circle cx="544" cy="246" r="4"/>
+  </g>
+</svg>
